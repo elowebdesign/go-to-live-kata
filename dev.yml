@@ -8,6 +8,7 @@
   roles:
     - common
     - firewall
+    - mysql
     - nginx
     - php-fpm
     - wordpress
