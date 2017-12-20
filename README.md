@@ -16,4 +16,10 @@ Before running this playbook, please run the following command to download Ansib
 
     $ ansible-galaxy install -r requirements.yml
 
+## Provisioning in Vagrant
+
+If you want to test this playbook on Vagrant, please run this command 
+
+    $ vagrant up
+
 
