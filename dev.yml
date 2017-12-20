@@ -8,4 +8,6 @@
   roles:
     - common
     - firewall
-    - nginx
+    # - nginx
+    # - php
+    # - wordpress

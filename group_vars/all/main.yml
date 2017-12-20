@@ -6,3 +6,4 @@ server_hostname: wordpress.dev
 # Wordpress
 wp_version: 4.9.1
 wp_sha1_sum: 892d2c23b9d458ec3d44de59b753adb41012e903
+remote_www_dir: /srv/www/{{server_hostname}}
