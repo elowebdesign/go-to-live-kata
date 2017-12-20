@@ -9,5 +9,5 @@
     - common
     - firewall
     - nginx
-    # - php
-    # - wordpress
+    - php-fpm
+    - wordpress
