@@ -1,0 +1,18 @@
+---
+# tasks file for nginx
+
+- name: Install nginx.
+  apt:
+    name: nginx
+    state: latest
+  become: yes
+
+- name: Change default nginx vhost.
+  template:
+    src: "default.j2"
+    dest: "/etc/nginx/sites-available/default"
+    owner: root
+    group: "root"
+    mode: 0644
+  notify:
+    - restart nginx

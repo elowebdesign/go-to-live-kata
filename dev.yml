@@ -1,5 +1,5 @@
 ---
-- name: "Install LAMP Stack with PHP 7.1 and MySQL on Vagrant"
+- name: "Install Nginx, PHP on Ububntu 14.04"
   hosts: development
   become: yes
   remote_user: vagrant
@@ -8,6 +8,6 @@
   roles:
     - common
     - firewall
-    # - nginx
+    - nginx
     # - php
     # - wordpress
