@@ -9,7 +9,7 @@
   become: yes
 
 - name: Check if WordPress directory exists in /srv/www
-  stat: path=/srv/www/{{server_hostname}}
+  stat: path={{docroot}}
   register: check_path
 
 - name: Download WordPress
@@ -31,7 +31,7 @@
   when: not check_path.stat.exists
 
 - name: Move WordPress install files
-  command: mv /tmp/wordpress /srv/www/{{server_hostname}}
+  command: mv /tmp/wordpress {{docroot}}
   become: yes
   when: not check_path.stat.exists
 

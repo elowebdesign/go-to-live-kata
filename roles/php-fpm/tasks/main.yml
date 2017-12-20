@@ -1,2 +1,30 @@
 ---
 # tasks file for php-fpm
+- name: Install PPA
+  become: yes
+  become_user: root
+  apt_repository: repo='ppa:ondrej/php' state=present
+
+- name: Update apt
+  become: yes
+  become_user: root
+  apt: update_cache=yes
+
+- name: Install PHP
+  become: yes
+  become_user: root
+  action: apt pkg={{ item }} state=present
+  with_items:
+    - php5.6-cli
+    - php5.6-fpm
+    - php5.6-mbstring
+    - php5.6-intl
+    - php5.6-curl
+    - php5.6-gd
+    - php5.6-mcrypt
+    - php5.6-mysql
+    - php5.6-sqlite3
+    - php5.6-xml
+    - php5.6-zip
+    - php-memcached
+    - php-xdebug
